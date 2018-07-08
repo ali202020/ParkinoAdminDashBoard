@@ -45,5 +45,10 @@ Route::resource('Reservation','ReservationController');
 Route::resource('User','UserController');
 
 
+//custom_registeration routes
+Route::get('register_form','RegFormController@getForm')->name('register_form');
+Route::post('register_form','RegFormController@postForm');
+
+
 //test route
 // Route::get('login',function(){return view('auth.login');});

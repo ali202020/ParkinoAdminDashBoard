@@ -52,7 +52,10 @@
                     <ul class="navbar-nav mr-auto mt-md-0">
                     @guest
                         <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Register</a></li>
+                        {{-- Authorizing registeration for system super admin --}}
+                        {{-- @can('create', App\User::class)
+                          <li><a href="{{ route('register_form') }}">Register Admins</a></li>
+                        @endcan --}}
                     @else
                         <!-- This is  -->
                         <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  " href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
@@ -226,10 +229,14 @@
                             <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../images/users/5.jpg" alt="user" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
-                                    <li><a href="#"><i class="ti-user"></i> Profile</a></li>
-                                    <li><a href="#"><i class="ti-wallet"></i> Balance</a></li>
+                                    <li><a href="#"><i class="ti-user"></i> {{ Auth::user()->name }} Profile</a></li>
                                     <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
-                                    <li><a href="#"><i class="ti-settings"></i> Setting</a></li>
+                                    <li>
+                                      {{-- Authorizing registeration for system super admin --}}
+                                      @can('create', App\User::class)
+                                        <a href="{{ route('register_form') }}">Register Admins</a>
+                                      @endcan
+                                    </li>
 
                                     <li>
                                       <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

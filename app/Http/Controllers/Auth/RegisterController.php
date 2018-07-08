@@ -62,6 +62,9 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        //authorizing registeration process
+        $this->authorize('create', User::class);
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
