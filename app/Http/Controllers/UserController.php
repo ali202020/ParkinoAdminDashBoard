@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\SystemUser;
 use Illuminate\Support\Facades\Hash;
+use App\Card;
 
 use Illuminate\Http\Request;
 
@@ -20,7 +21,10 @@ class UserController extends Controller
   public function index()
   {
       //
-      $SystemUsers = SystemUser::all();
+      // $SystemUsers=array();
+
+      $SystemUsers = SystemUser::whereHas('card')->get();
+
       return view('users.index_user')->with('SystemUsers',$SystemUsers);
   }
 

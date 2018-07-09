@@ -12,6 +12,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon.png">
     <title>Ela - Bootstrap Admin Dashboard Template</title>
     <link href="../../css/lib/amchart/export.css" rel="stylesheet">
+
+    <link href="../../css/lib/calendar2/semantic.ui.min.css" rel="stylesheet">
+    <link href="../../css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="../../css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -271,8 +274,6 @@
                         <li class="nav-label">Apps</li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Email</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="email-compose.html">Compose</a></li>
-                                <li><a href="email-read.html">Read</a></li>
                                 <li><a href="email-inbox.html">Inbox</a></li>
                             </ul>
                         </li>
@@ -285,6 +286,7 @@
                                 <li><a href="{{ route('User.index') }}">Users</a></li>
                                 <li><a href="{{ route('Owner.index') }}">Owners/PA</a></li>
                                 <li><a href="{{ route('Card.index') }}">Cards</a></li>
+                                <li><a href="{{ route('Reservation_index') }}">Current Reservations</a></li>
 
                             </ul>
                         </li>
@@ -416,6 +418,39 @@
     <script src="../../js/lib/chart-amchart/amchart-init.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+
+    <script src="../../js/lib/calendar-2/moment.latest.min.js"></script>
+    <!-- scripit init-->
+    <script src="../../js/lib/calendar-2/semantic.ui.min.js"></script>
+    <!-- scripit init-->
+    <script src="../../js/lib/calendar-2/prism.min.js"></script>
+    <!-- scripit init-->
+    <script src="../../js/lib/calendar-2/pignose.calendar.min.js"></script>
+    <!-- scripit init-->
+    <script src="../../js/lib/calendar-2/pignose.init.js"></script>
+
+
+    <script src="../../js/lib/weather/jquery.simpleWeather.min.js"></script>
+    <script src="../../js/lib/weather/weather-init.js"></script>
+
+    {{-- <script src="../../../../chartjs/dist/Chart.js"></script>
+    <script>
+        var myChart = new Chart(ctx, {...});
+    </script> --}}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}

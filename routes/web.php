@@ -39,7 +39,9 @@ Route::resource('Owner','OwnerController');
 
 
 //Routing CRUD for reservations
-Route::resource('Reservation','ReservationController');
+//Route::resource('Reservation','ReservationController');
+Route::get('Reservation','ReservationController@index')->name('Reservation_index');
+Route::get('Reservation/{Reservation}','ReservationController@disableState')->name('Reservation_disable');
 
 //Routing CRUD for users
 Route::resource('User','UserController');

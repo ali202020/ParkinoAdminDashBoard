@@ -58,143 +58,25 @@
   <div class="row bg-white m-l-0 m-r-0 box-shadow ">
 
       <!-- column -->
-      <div class="col-lg-8">
+      <div class="col-lg-12">
           <div class="card">
+              <div class="card-title">
+                  <h4>Statistics</h4>
+              </div>
               <div class="card-body">
-                  {{-- <h4 class="card-title">Extra Area Chart</h4> --}}
-                  <div class="row">
-                      <div class="col-lg-12">
-                          <div class="card">
-                              <div class="card-title">
-                                  <h4>AmChart</h4>
-                              </div>
-                              <div class="card-body">
-                                  <div id="chartdiv"></div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="extra-area-chart"></div>
+                  {{-- <div id="chartdiv"></div> --}}
+                  {!! $chartjs->render() !!}
+
               </div>
           </div>
       </div>
       <!-- column -->
 
-      <!-- column -->
-      <div class="col-lg-4">
-          <div class="card">
-              <div class="card-body browser">
-                  <p class="f-w-600">iMacs <span class="pull-right">85%</span></p>
-                  <div class="progress ">
-                      <div role="progressbar" style="width: 85%; height:8px;" class="progress-bar bg-danger wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
-                  </div>
 
-                  <p class="m-t-30 f-w-600">iBooks<span class="pull-right">90%</span></p>
-                  <div class="progress">
-                      <div role="progressbar" style="width: 90%; height:8px;" class="progress-bar bg-info wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
-                  </div>
-
-                  <p class="m-t-30 f-w-600">iPhone<span class="pull-right">65%</span></p>
-                  <div class="progress">
-                      <div role="progressbar" style="width: 65%; height:8px;" class="progress-bar bg-success wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
-                  </div>
-
-                  <p class="m-t-30 f-w-600">Samsung<span class="pull-right">65%</span></p>
-                  <div class="progress">
-                      <div role="progressbar" style="width: 65%; height:8px;" class="progress-bar bg-warning wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
-                  </div>
-
-  <p class="m-t-30 f-w-600">android<span class="pull-right">65%</span></p>
-                  <div class="progress m-b-30">
-                      <div role="progressbar" style="width: 65%; height:8px;" class="progress-bar bg-success wow animated progress-animated"> <span class="sr-only">60% Complete</span> </div>
-                  </div>
-              </div>
-          </div>
-      </div>
       <!-- column -->
   </div>
   <div class="row">
-<div class="col-lg-3">
-          <div class="card bg-dark">
-              <div class="testimonial-widget-one p-17">
-                  <div class="testimonial-widget-one owl-carousel owl-theme">
-                      <div class="item">
-                          <div class="testimonial-content">
-                              <img class="testimonial-author-img" src="images/avatar/2.jpg" alt="" />
-                              <div class="testimonial-author">John</div>
-                              <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
-
-                              <div class="testimonial-text">
-                                  <i class="fa fa-quote-left"></i>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation .
-                                  <i class="fa fa-quote-right"></i>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="item">
-                          <div class="testimonial-content">
-                              <img class="testimonial-author-img" src="images/avatar/3.jpg" alt="" />
-                              <div class="testimonial-author">Abraham</div>
-                              <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
-
-                              <div class="testimonial-text">
-                                  <i class="fa fa-quote-left"></i>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation .
-                                  <i class="fa fa-quote-right"></i>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="item">
-                          <div class="testimonial-content">
-                              <img class="testimonial-author-img" src="images/avatar/1.jpg" alt="" />
-                              <div class="testimonial-author">Lincoln</div>
-                              <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
-
-                              <div class="testimonial-text">
-                                  <i class="fa fa-quote-left"></i>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation .
-                                  <i class="fa fa-quote-right"></i>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="item">
-                          <div class="testimonial-content">
-                              <img class="testimonial-author-img" src="images/avatar/4.jpg" alt="" />
-                              <div class="testimonial-author">TYRION LANNISTER</div>
-                              <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
-
-                             <div class="testimonial-text">
-                                  <i class="fa fa-quote-left"></i>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation .
-                                  <i class="fa fa-quote-right"></i>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="item">
-                          <div class="testimonial-content">
-                              <img class="testimonial-author-img" src="images/avatar/5.jpg" alt="" />
-                              <div class="testimonial-author">TYRION LANNISTER</div>
-                              <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
-
-                              <div class="testimonial-text">
-                                  <i class="fa fa-quote-left"></i>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation .
-                                  <i class="fa fa-quote-right"></i>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="item">
-                          <div class="testimonial-content">
-                              <img class="testimonial-author-img" src="images/avatar/6.jpg" alt="" />
-                              <div class="testimonial-author">TYRION LANNISTER</div>
-                              <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
-
-                              <div class="testimonial-text">
-                                  <i class="fa fa-quote-left"></i>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation .
-                                  <i class="fa fa-quote-right"></i>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="col-lg-9">
+      <div class="col-lg-12">
           <div class="card">
               <div class="card-title">
                   <h4>Recent Orders </h4>
@@ -337,48 +219,19 @@
 <div class="col-lg-4">
           <div class="card">
               <div class="card-body">
-                  <h4 class="card-title">Todo</h4>
+                  <h4 class="card-title">Weather</h4>
                   <div class="card-content">
-                      <div class="todo-list">
-                          <div class="tdl-holder">
-                              <div class="tdl-content">
-                                  <ul>
-                                      <li>
-                                          <label>
-                <input type="checkbox"><i class="bg-primary"></i><span>Build an angular app</span>
-                <a href='#' class="ti-close"></a>
-              </label>
-                                      </li>
-                                      <li>
-                                          <label>
-                <input type="checkbox" checked><i class="bg-success"></i><span>Creating component page</span>
-                <a href='#' class="ti-close"></a>
-              </label>
-                                      </li>
-                                      <li>
-                                          <label>
-                <input type="checkbox" checked><i class="bg-warning"></i><span>Follow back those who follow you</span>
-                <a href='#' class="ti-close"></a>
-              </label>
-                                      </li>
-                                      <li>
-                                          <label>
-                <input type="checkbox" checked><i class="bg-danger"></i><span>Design One page theme</span>
-                <a href='#' class="ti-close"></a>
-              </label>
-                                      </li>
 
-                                      <li>
-                                          <label>
-                <input type="checkbox" checked><i class="bg-success"></i><span>Creating component page</span>
-                <a href='#' class="ti-close"></a>
-              </label>
-                                      </li>
-                                  </ul>
-                              </div>
-                              <input type="text" class="tdl-new form-control" placeholder="Type here">
-                          </div>
-                      </div>
+                    <div class="col-12">
+                        <div class="card bg-primary">
+                            <div class="card-body">
+                                <div class="weather-widget">
+                                    <div id="weather-one" class="weather-one"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                   </div>
               </div>
           </div>

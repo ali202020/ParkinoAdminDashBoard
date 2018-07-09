@@ -27,7 +27,9 @@
                                   <th>Phone Number</th>
                                   <th>Points</th>
                                   <th>Consumed Points</th>
-                                  <th>Creted At</th>
+                                  {{-- <th>RFID Card Number</th>
+                                  <th>QR Card Number</th> --}}
+                                  <th>Created At</th>
                                   <th>Updated At</th>
                                   <th>Edit</th>
                                   <th>Delete</th>
@@ -43,6 +45,8 @@
                                   <td id="phone_number">{{$SystemUser->phone_number}}</td>
                                   <td id="points">{{$SystemUser->points}}</td>
                                   <td id="consumed_points">{{$SystemUser->consumed_points}}</td>
+                                  {{-- <td id="rfid_no">{{$SystemUser->user_card->rfid_no}}</td>
+                                  <td id="qr_no">{{$SystemUser->user_card->qr_no}}</td> --}}
                                   <td id="created_at">{{$SystemUser->created_at}}</td>
                                   <td id="updated_at">{{$SystemUser->updated_at}}</td>
                                   <td>
