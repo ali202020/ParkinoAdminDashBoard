@@ -52,9 +52,10 @@
                                     <a name="edit" id="edit" href="{{route('Reservation_disable',['id' => $usersReservation->id ])}}" class="btn btn-success btn-rounded m-b-10 m-l-5">Edit</a>
                                   </td> --}}
                                   <td>
-                                  {!! Form::open(['route' => ['Reservation_disable', $usersReservation->id] , 'method'=>'GET']) !!}
-                                    {{ Form::submit('Disable',['class'=>'btn btn-danger btn-rounded m-b-8 m-l-4'])}}
+                                  {!! Form::open(['route' => ['Reservation.destroy', $usersReservation->id] , 'method'=>'DELETE']) !!}
+                                    {{ Form::submit('Cancel Reservation',['class'=>'btn btn-danger dis btn-rounded m-b-8 m-l-4'])}}
                                   {!! Form::close() !!}
+
                                   </td>
                                 </tr>
                               @endforeach

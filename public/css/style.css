@@ -2531,6 +2531,7 @@ table.dataTable thead .sorting_asc_disabled,
 table.dataTable thead .sorting_desc,
 table.dataTable thead .sorting_desc_disabled {
   background: transparent none repeat scroll 0 0;
+  text-align: left;
 }
 table.dataTable thead .sorting_asc::after {
   content: "";
@@ -5394,7 +5395,7 @@ thead tr th {
   font-weight: 500;
 }
 thead tr th:last-child {
-  text-align: right;
+  text-align: left;
 }
 tbody tr th {
   color: #455a64;
@@ -5405,8 +5406,11 @@ tbody tr td {
   font-family: 'Poppins', sans-serif;
   color: #99abb4;
 }
+tbody tr td .en{
+    display:  none;
+}
 tbody tr td:last-child {
-  text-align: right;
+  text-align: left;
 }
 .table > tbody > tr > td,
 .table > tbody > tr > th,

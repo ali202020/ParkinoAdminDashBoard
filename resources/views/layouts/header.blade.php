@@ -5,16 +5,13 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <!-- Logo icon -->
-                <b><img src="images/logo.png" alt="homepage" class="dark-logo" /></b>
-                <!--End Logo icon -->
-                <!-- Logo text -->
-                <span><img src="images/logo-text.png" alt="homepage" class="dark-logo" /></span>
+                  <b><img src="../../logo11.png" class="dark-logo" /></b>
             </a>
         </div>
         <!-- End Logo -->
         <div class="navbar-collapse">
             <!-- toggle and nav items -->
-            <ul class="navbar-nav mr-auto mt-md-0">
+            <ul class="navbar-nav mr-auto mt-md-0" style="margin-left: 20px !important;">
             @guest
                 <li><a href="{{ route('login') }}">Login</a></li>
 

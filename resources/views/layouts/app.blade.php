@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon.png">
-    <title>Ela - Bootstrap Admin Dashboard Template</title>
+    <title>parkino - Admin panel management</title>
     <link href="../../css/lib/amchart/export.css" rel="stylesheet">
 
     <link href="../../css/lib/calendar2/semantic.ui.min.css" rel="stylesheet">
@@ -43,16 +43,13 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="{{ route('home') }}">
                         <!-- Logo icon -->
-                        <b><img src="../../images/logo.png" alt="homepage" class="dark-logo" /></b>
-                        <!--End Logo icon -->
-                        <!-- Logo text -->
-                        <span><img src="../../images/logo-text.png" alt="homepage" class="dark-logo" /></span>
+                        <b><img src="../../logo11.png" class="dark-logo" /></b>
                     </a>
                 </div>
                 <!-- End Logo -->
                 <div class="navbar-collapse">
                     <!-- toggle and nav items -->
-                    <ul class="navbar-nav mr-auto mt-md-0">
+                    <ul class="navbar-nav mr-auto mt-md-0" style="margin-left: 20px !important;">
                     @guest
                         <li><a href="{{ route('login') }}">Login</a></li>
                         {{-- Authorizing registeration for system super admin --}}
@@ -192,28 +189,28 @@
                                         <div class="message-center">
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="../../images/users/5.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="user-img"> <span class="profile-status online pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Michael Qin</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:30 AM</span>
                                                 </div>
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="../../images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
+                                                <div class="user-img"> <span class="profile-status busy pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>John Doe</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span>
                                                 </div>
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="../../images/users/3.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
+                                                <div class="user-img"> <span class="profile-status away pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Mr. John</h5> <span class="mail-desc">I am a singer!</span> <span class="time">9:08 AM</span>
                                                 </div>
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="../../images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                                <div class="user-img">  <span class="profile-status offline pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Michael Qin</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span>
                                                 </div>
@@ -229,7 +226,7 @@
                         <!-- End Messages -->
                         <!-- Profile -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../images/users/5.jpg" alt="user" class="profile-pic" /></a>
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/users/5.jpg" alt="user" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
                                     <li><a href="#"><i class="ti-user"></i> {{ Auth::user()->name }} Profile</a></li>
@@ -271,7 +268,7 @@
                         <li> <a href="{{route('home')}}" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
 
                         </li>
-                        <li class="nav-label">Apps</li>
+                        <li class="nav-label">Feed Backs</li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Email</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="email-inbox.html">Inbox</a></li>
@@ -286,7 +283,8 @@
                                 <li><a href="{{ route('User.index') }}">Users</a></li>
                                 <li><a href="{{ route('Owner.index') }}">Owners/PA</a></li>
                                 <li><a href="{{ route('Card.index') }}">Cards</a></li>
-                                <li><a href="{{ route('Reservation_index') }}">Current Reservations</a></li>
+                                <li><a href="{{ route('Reservation.index') }}">Current Reservations</a></li>
+                                <li><a href="{{ route('Reservation.index') }}">Manage Admins</a></li>
 
                             </ul>
                         </li>
@@ -299,10 +297,10 @@
                         </li>
 
                         <li class="nav-label">EXTRA</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Pages <span class="label label-rouded label-success pull-right">8</span></span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Others <span class="label label-rouded label-success pull-right">8</span></span></a>
                             <ul aria-expanded="false" class="collapse">
 
-                                <li><a href="#" class="has-arrow">Authentication <span class="label label-rounded label-success">6</span></a>
+                                {{-- <li><a href="#" class="has-arrow">Authentication <span class="label label-rounded label-success">6</span></a>
                                     <ul aria-expanded="false" class="collapse">
                                         <li><a href="page-login.html">Login</a></li>
                                         <li><a href="page-register.html">Register</a></li>
@@ -317,30 +315,10 @@
                                         <li><a href="page-error-500.html">500</a></li>
                                         <li><a href="page-error-503.html">503</a></li>
                                     </ul>
-                                </li>
+                                </li> --}}
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-map-marker"></i><span class="hide-menu">Maps</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="map-google.html">Google</a></li>
-                                <li><a href="map-vector.html">Vector</a></li>
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-level-down"></i><span class="hide-menu">Multi level dd</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">item 1.1</a></li>
-                                <li><a href="#">item 1.2</a></li>
-                                <li> <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
-                                    <ul aria-expanded="false" class="collapse">
-                                        <li><a href="#">item 1.3.1</a></li>
-                                        <li><a href="#">item 1.3.2</a></li>
-                                        <li><a href="#">item 1.3.3</a></li>
-                                        <li><a href="#">item 1.3.4</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">item 1.4</a></li>
-                            </ul>
-                        </li>
+
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -397,6 +375,7 @@
     <!--Custom JavaScript -->
     <!--Custom JavaScript -->
     <script src="../../js/custom.min.js"></script>
+    <script src="../../js/reserve.js"></script>
     <script src="../../js/lib/datatables/datatables.min.js"></script>
     <script src="../../js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
     <script src="../../js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>

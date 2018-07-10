@@ -61,7 +61,7 @@
                                     <td>@foreach($PA as $Area) <input type="number" class="form-control" id="price" name="price" value="{{$Area->price}}"> @endforeach</td>
                                     <td>@foreach($PA as $Area) <input type="number" class="form-control" id="stars" name="stars" value="{{$Area->stars}}"> @endforeach</td>
 
-                                    <td><input type="file" name="file[]" class="form-control" multiple></td>
+                                    <td><input type="file" name="file[]" multiple></td>
                                     <td>
                                       <input type="submit" value="Save" class="btn btn-primary btn-rounded m-b-10 m-l-5">
                                     </td>
@@ -77,7 +77,7 @@
                       {{-- </form> --}}
                       {{-- <div class="dataTables_info" id="example23_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries (filtered from 57 total entries)
                       </div>
-                      <div class="dataTables_paginate paging_simple_numbers" id="example23_paginate"><a class="paginate_button previous disabled" aria-controls="example23" data-dt-idx="0" tabindex="0" id="example23_previous">Previous</a><span></span><a class="paginate_button next disabled" aria-controls="example23" data-dt-idx="1" tabindex="0" id="example23_next">Next</a></div> --}}
+                      <div class="dataTables_paginate special paging_simple_numbers"  id="example23_paginate"><a class="paginate_button previous disabled" aria-controls="example23" data-dt-idx="0" tabindex="0" id="example23_previous">Previous</a><span></span><a class="paginate_button next disabled" aria-controls="example23" data-dt-idx="1" tabindex="0" id="example23_next">Next</a></div> --}}
                       <br>
                       <a name="A" id="A" href="{{route('Owner.create')}}" class="btn btn-info btn-rounded m-b-10 m-l-5">Add More Users</a>
                   </div>
