@@ -284,7 +284,9 @@
                                 <li><a href="{{ route('Owner.index') }}">Owners/PA</a></li>
                                 <li><a href="{{ route('Card.index') }}">Cards</a></li>
                                 <li><a href="{{ route('Reservation.index') }}">Current Reservations</a></li>
-                                <li><a href="{{ route('Reservation.index') }}">Manage Admins</a></li>
+                                @can('superAdminAction', App\User::class)
+                                <li><a href="{{ route('Admin.index') }}">Manage Admins</a></li>
+                                @endcan
 
                             </ul>
                         </li>
@@ -293,6 +295,9 @@
                                 <li><a href="{{ route('User.create') }}">Create New User</a></li>
                                 <li><a href="{{ route('Card.create') }}">Generate New Cards</a></li>
                                 <li><a href="{{ route('Owner.create') }}">Add Owner/proprietary Info</a></li>
+                                @can('superAdminAction', App\User::class)
+                                <li><a href="{{ route('Admin.create') }}">Create New Admin</a></li>
+                                @endcan
                             </ul>
                         </li>
 

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +13,11 @@
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+  if(Auth::check()){
+    return redirect()->route('home');
+
+  }
+  return view('auth.login');
 });
 
 Auth::routes();
@@ -45,6 +50,9 @@ Route::resource('Reservation','ReservationController');
 
 //Routing CRUD for users
 Route::resource('User','UserController');
+
+//Routing CRUD for admins
+Route::resource('Admin','AdminController');
 
 
 //custom_registeration routes

@@ -43,7 +43,7 @@ class HomeController extends Controller
                 "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
                 "pointHoverBackgroundColor" => "#fff",
                 "pointHoverBorderColor" => "rgba(220,220,220,1)",
-                'data' => [20, 10, 30, 40, 22, 30, 15],
+                'data' => [10, 12, 15, 20, 25, 30,40 ],
             ],
             [
                 "label" => "Users ",
@@ -53,20 +53,27 @@ class HomeController extends Controller
                 "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
                 "pointHoverBackgroundColor" => "#fff",
                 "pointHoverBorderColor" => "rgba(220,220,220,1)",
-                'data' => [12, 33, 25, 40, 43, 23, 40],
+                'data' => [12, 22, 32, 42, 52, 58, 60],
             ]
         ])
         ->options([]);
 
         //Recently added users
         $SystemUsers= array();
-        $SystemUsers = DB::table('users')->orderBy('created_at', 'desc')->first();
-        var_dump($SystemUsers);
-        die();
+        $SystemUsers = SystemUser::orderBy('created_at', 'desc')->take(5)->get();
+        // var_dump($SystemUsers);
+        // die();
         $user_count = DB::table('users')->count();
         $pa_count = DB::table('parkingareas')->count();
         $total_owners = DB::table('owners')->count();
         $total_cards = DB::table('cards')->count();
+
+
+
+
+
+        //Obtaining the avg of number of users for each month
+
 
 
 

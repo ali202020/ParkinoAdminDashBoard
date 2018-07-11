@@ -31,6 +31,16 @@ class UserPolicy
     }
 
 
+    public function superAdminAction(User $user)
+    {
+        if($user->email === "ali@superadmin.com" && Hash::check('123456',$user->password) === true){
+          return true;
+        }else{
+          return false;
+        }
+    }
+
+
 
 
 
